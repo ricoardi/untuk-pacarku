@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>🎉 Surprise!</title>
 <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
 </head>
 <body class="surprise-page">
   <audio id="bgm" src="happy-bday.mp3" autoplay loop></audio>
@@ -17,19 +18,51 @@
   </div>
 
   <div class="message">
+    <!-- Halaman 1 -->
     <div class="page page1 active">
-      <h2>🎂 Halaman 1</h2>
-      <p>Deskripsi dummy: di sini nanti ucapan pembuka dari kamu (contoh: "Hari ini bukan hari biasa...")</p>
+      <h2>Sayangku Okta 💕</h2>
+      <p>
+        Selamat ulang tahun yang ke-24, cintaku. Hari ini adalah hari yang selalu terasa istimewa, bukan hanya karena kamu bertambah usia, tapi karena dunia pernah menghadiahkanku seseorang seindah dirimu.
+      </p>
+      <p>
+        Sudah hampir enam tahun kita bersama, Sayang. Enam tahun penuh cerita — tawa, harapan, perjuangan, dan juga jarak yang kini harus kita jalani. Tapi meski jarak memisahkan raga kita, hati kita tetap berdetak dalam irama yang sama.
+      </p>
+      <p>
+        Aku masih bisa membayangkan hari itu — bagaimana kita sama-sama kikuk di awal, masih saling canggung, tapi entah kenapa aku merasa nyaman berada di dekatmu. Ada sesuatu dalam caramu tersenyum, dalam caramu bicara, yang membuatku ingin mengenalmu lebih jauh.
+      </p>
     </div>
 
+    <!-- Halaman 2 -->
     <div class="page page2">
-      <h2>💖 Halaman 2</h2>
-      <p>Deskripsi dummy: tempat kamu bisa taruh cerita lucu, kenangan, atau ungkapan manis.</p>
+      <p>
+        Dan kini, enam tahun kemudian, rasa itu tidak pernah berkurang sedikit pun. Meski jarak memisahkan, setiap kali aku ingat masa-masa itu, aku selalu tersenyum. Karena dari tempat itulah semuanya bermula — kisah dua orang yang awalnya cuma teman magang, tapi akhirnya jadi pasangan yang saling menguatkan.
+      </p>
+      <p>
+        Sayang, aku tahu perjalanan kita tidak selalu mudah. Tapi justru dari situ aku belajar bahwa cinta bukan cuma soal selalu bersama, tapi soal kesetiaan, kepercayaan, dan keyakinan bahwa kamu adalah satu-satunya orang yang layak kuperjuangkan.
+      </p>
+      <p>
+        Di ulang tahunmu yang ke-24 ini, aku ingin kamu tahu bahwa aku bangga padamu. Aku tahu kamu sudah berjuang keras sampai di titik ini. Aku beruntung sekali bisa mencintai seseorang sekuat kamu.
+      </p>
+      <p>
+        Aku berharap di usia barumu ini, semua doa dan impianmu perlahan jadi nyata. Aku ingin kamu bahagia, bukan cuma karena aku, tapi karena kamu memang pantas mendapatkannya.
+      </p>
     </div>
 
+    <!-- Halaman 3 -->
     <div class="page page3">
-      <h2>🎁 Halaman 3</h2>
-      <p>Deskripsi dummy: ucapan penutup, harapan, atau doa spesial buat dia 💫</p>
+      <p>
+        Kamu tahu, Sayang? Kadang aku iri pada waktu. Karena waktu bisa terus berjalan bersamamu, sementara aku hanya bisa menghitung hari sampai kita bertemu lagi.
+      </p>
+      <p>
+        Tapi aku juga bersyukur, karena waktu membuktikan bahwa jarak tidak pernah bisa menghapus rasa. Kita tetap saling mencintai, tetap saling percaya, dan tetap saling menunggu.
+      </p>
+      <p>
+        Selamat ulang tahun yang ke-24, Sayangku Okta. Semoga segala yang kamu impikan menjadi nyata, dan semoga cinta kita terus tumbuh, sedewasa waktu, sekuat doa, dan seindah kisah pertama kita di Dinas Kehutanan dulu.
+      </p>
+      <p>
+        Dengan seluruh cinta dan rinduku,<br>
+        <strong>Aku 💌</strong>
+      </p>
     </div>
 
     <div class="nav-buttons">
@@ -39,28 +72,25 @@
   </div>
 
 <script>
-/* === Slideshow otomatis === */
+/* === Slideshow polaroid otomatis === */
 const polaroids = document.querySelectorAll('.polaroid');
 let current = 0;
 
 function showPhoto(index) {
   polaroids.forEach((p, i) => {
     p.classList.toggle('active', i === index);
-    // Rotasi acak kecil biar lucu
-    const rotation = (Math.random() * 12 - 6).toFixed(1); 
+    const rotation = (Math.random() * 14 - 7).toFixed(1);
     p.style.transform = `rotate(${rotation}deg) scale(${i === index ? 1 : 0.9})`;
   });
 }
-
 function nextPhoto() {
   current = (current + 1) % polaroids.length;
   showPhoto(current);
 }
-
 showPhoto(current);
-setInterval(nextPhoto, 3500); // ganti foto tiap 3.5 detik
+setInterval(nextPhoto, 3500);
 
-/* === Navigasi halaman ucapan === */
+/* === Navigasi ucapan === */
 let currentPage = 1;
 const totalPages = 3;
 const showPage = (n) => {
