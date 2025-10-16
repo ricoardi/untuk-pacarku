@@ -180,3 +180,42 @@ body {
   .polaroid { width: 150px; }
   .message { padding: 20px; font-size: 0.95em; }
 }
+
+/* Intro Screen */
+.intro-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #ffe6f2, #ffd6ef);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.8s ease;
+  z-index: 999;
+}
+
+.intro-screen h1 {
+  font-size: 2.5em;
+  color: #ff64c1;
+  font-family: 'Patrick Hand', cursive;
+  margin-bottom: 20px;
+}
+
+.intro-screen button {
+  background: #ff8ad4;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 15px;
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+.intro-screen button:hover {
+  background: #ff64c1;
+  transform: scale(1.05);
+}
