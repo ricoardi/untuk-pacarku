@@ -1,111 +1,94 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🎉 Surprise!</title>
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎂 Surprise untuk Okta 💕</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
 </head>
-<body class="surprise-page">
-  <audio id="bgm" src="happy-bday.mp3" autoplay loop></audio>
+<body>
 
+  <!-- Musik Latar -->
+  <audio id="bg-music" autoplay loop>
+    <source src="lagu.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Galeri Polaroid -->
   <div class="gallery">
-    <div class="polaroid"><img src="WhatsApp Image 2025-10-16 at 17.14.42.jpeg" alt="Foto 1"></div>
-    <div class="polaroid"><img src="WhatsApp Image 2025-10-16 at 17.15.55.jpeg" alt="Foto 2"></div>
-    <div class="polaroid"><img src="WhatsApp Image 2025-10-16 at 17.17.25.jpeg" alt="Foto 3"></div>
-    <div class="polaroid"><img src="WhatsApp Image 2025-10-16 at 17.18.39.jpeg" alt="Foto 4"></div>
+    <div class="polaroid active" style="--angle: -5deg;"><img src="WhatsApp Image 2025-10-16 at 17.14.42.jpeg"></div>
+    <div class="polaroid" style="--angle: 3deg;"><img src="WhatsApp Image 2025-10-16 at 17.15.55.jpeg"></div>
+    <div class="polaroid" style="--angle: -8deg;"><img src="WhatsApp Image 2025-10-16 at 17.17.25.jpeg"></div>
+    <div class="polaroid" style="--angle: 6deg;"><img src="WhatsApp Image 2025-10-16 at 17.18.39.jpeg"></div>
   </div>
 
+  <!-- Pesan Cinta -->
   <div class="message">
-    <!-- Halaman 1 -->
-    <div class="page page1 active">
-      <h2>Sayangku Okta 💕</h2>
-      <p>
-        Selamat ulang tahun yang ke-24, cintaku. Hari ini adalah hari yang selalu terasa istimewa, bukan hanya karena kamu bertambah usia, tapi karena dunia pernah menghadiahkanku seseorang seindah dirimu.
-      </p>
-      <p>
-        Sudah hampir enam tahun kita bersama, Sayang. Enam tahun penuh cerita — tawa, harapan, perjuangan, dan juga jarak yang kini harus kita jalani. Tapi meski jarak memisahkan raga kita, hati kita tetap berdetak dalam irama yang sama.
-      </p>
-      <p>
-        Aku masih bisa membayangkan hari itu — bagaimana kita sama-sama kikuk di awal, masih saling canggung, tapi entah kenapa aku merasa nyaman berada di dekatmu. Ada sesuatu dalam caramu tersenyum, dalam caramu bicara, yang membuatku ingin mengenalmu lebih jauh.
-      </p>
+
+    <div class="page active" id="page1">
+      <h2>Sayangku Okta, 💕</h2>
+      <p>Selamat ulang tahun yang ke-24, cintaku. Hari ini adalah hari yang selalu terasa istimewa — bukan hanya karena kamu bertambah usia, tapi karena dunia pernah menghadiahkanku seseorang seindah dirimu.</p>
+      <p>Sudah hampir enam tahun kita bersama, Sayang. Enam tahun penuh tawa, perjuangan, dan jarak yang kini harus kita jalani. Tapi meski jauh, hati kita tetap berdetak dalam irama yang sama.</p>
     </div>
 
-    <!-- Halaman 2 -->
-    <div class="page page2">
-      <p>
-        Dan kini, enam tahun kemudian, rasa itu tidak pernah berkurang sedikit pun. Meski jarak memisahkan, setiap kali aku ingat masa-masa itu, aku selalu tersenyum. Karena dari tempat itulah semuanya bermula — kisah dua orang yang awalnya cuma teman magang, tapi akhirnya jadi pasangan yang saling menguatkan.
-      </p>
-      <p>
-        Sayang, aku tahu perjalanan kita tidak selalu mudah. Tapi justru dari situ aku belajar bahwa cinta bukan cuma soal selalu bersama, tapi soal kesetiaan, kepercayaan, dan keyakinan bahwa kamu adalah satu-satunya orang yang layak kuperjuangkan.
-      </p>
-      <p>
-        Di ulang tahunmu yang ke-24 ini, aku ingin kamu tahu bahwa aku bangga padamu. Aku tahu kamu sudah berjuang keras sampai di titik ini. Aku beruntung sekali bisa mencintai seseorang sekuat kamu.
-      </p>
-      <p>
-        Aku berharap di usia barumu ini, semua doa dan impianmu perlahan jadi nyata. Aku ingin kamu bahagia, bukan cuma karena aku, tapi karena kamu memang pantas mendapatkannya.
-      </p>
+    <div class="page" id="page2">
+      <p>Aku masih ingat jelas hari pertama kita bertemu — di Dinas Kehutanan Provinsi Sumatera Selatan. Dari pertemuan itu, tumbuh kisah cinta yang pelan tapi pasti, hangat tapi kuat.</p>
+      <p>Sayang, aku tahu perjalanan kita tidak selalu mudah. Tapi justru di situlah aku belajar, bahwa cinta sejati bukan soal selalu bersama, tapi soal percaya dan bertahan.</p>
     </div>
 
-    <!-- Halaman 3 -->
-    <div class="page page3">
-      <p>
-        Kamu tahu, Sayang? Kadang aku iri pada waktu. Karena waktu bisa terus berjalan bersamamu, sementara aku hanya bisa menghitung hari sampai kita bertemu lagi.
-      </p>
-      <p>
-        Tapi aku juga bersyukur, karena waktu membuktikan bahwa jarak tidak pernah bisa menghapus rasa. Kita tetap saling mencintai, tetap saling percaya, dan tetap saling menunggu.
-      </p>
-      <p>
-        Selamat ulang tahun yang ke-24, Sayangku Okta. Semoga segala yang kamu impikan menjadi nyata, dan semoga cinta kita terus tumbuh, sedewasa waktu, sekuat doa, dan seindah kisah pertama kita di Dinas Kehutanan dulu.
-      </p>
-      <p>
-        Dengan seluruh cinta dan rinduku,<br>
-        <strong>Aku 💌</strong>
-      </p>
+    <div class="page" id="page3">
+      <p>Terima kasih sudah bertahan sejauh ini, Sayang. Aku bangga padamu. Aku mencintaimu bukan karena kamu sempurna, tapi karena bersamamu aku merasa cukup — kamu adalah rumahku. 💌</p>
+      <p>Selamat ulang tahun yang ke-24, cintaku. Semoga semua impianmu tercapai satu per satu, dan semoga aku selalu jadi orang yang menemanimu sampai akhir nanti. ❤️</p>
     </div>
 
+    <!-- Tombol Navigasi -->
     <div class="nav-buttons">
-      <button id="prevBtn">⬅ Kembali</button>
-      <button id="nextBtn">Lanjut ➡</button>
+      <button id="prevBtn">⬅️ Kembali</button>
+      <button id="nextBtn">➡️ Lanjut</button>
     </div>
   </div>
 
-<script>
-/* === Slideshow polaroid otomatis === */
-const polaroids = document.querySelectorAll('.polaroid');
-let current = 0;
+  <!-- Mini Cake -->
+  <div class="mini-cake">
+    <div class="layer"></div>
+    <div class="base"></div>
+    <div class="candle"><div class="flame"></div></div>
+  </div>
 
-function showPhoto(index) {
-  polaroids.forEach((p, i) => {
-    p.classList.toggle('active', i === index);
-    const rotation = (Math.random() * 14 - 7).toFixed(1);
-    p.style.transform = `rotate(${rotation}deg) scale(${i === index ? 1 : 0.9})`;
-  });
-}
-function nextPhoto() {
-  current = (current + 1) % polaroids.length;
-  showPhoto(current);
-}
-showPhoto(current);
-setInterval(nextPhoto, 3500);
+  <!-- Script Navigasi + Slideshow -->
+  <script>
+    const pages = document.querySelectorAll('.page');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    let currentPage = 0;
 
-/* === Navigasi ucapan === */
-let currentPage = 1;
-const totalPages = 3;
-const showPage = (n) => {
-  document.querySelectorAll('.page').forEach((p, i) => {
-    p.classList.toggle('active', i === n - 1);
-  });
-};
-document.getElementById('nextBtn').onclick = () => {
-  if (currentPage < totalPages) currentPage++;
-  showPage(currentPage);
-};
-document.getElementById('prevBtn').onclick = () => {
-  if (currentPage > 1) currentPage--;
-  showPage(currentPage);
-};
-</script>
+    function updatePages() {
+      pages.forEach((p, i) => p.classList.toggle('active', i === currentPage));
+      prevBtn.style.display = currentPage === 0 ? 'none' : 'inline-block';
+      nextBtn.style.display = currentPage === pages.length - 1 ? 'none' : 'inline-block';
+    }
+
+    nextBtn.onclick = () => {
+      if (currentPage < pages.length - 1) currentPage++;
+      updatePages();
+    };
+
+    prevBtn.onclick = () => {
+      if (currentPage > 0) currentPage--;
+      updatePages();
+    };
+
+    updatePages();
+
+    // Slideshow polaroid otomatis
+    const polaroids = document.querySelectorAll('.polaroid');
+    let currentPhoto = 0;
+    setInterval(() => {
+      polaroids[currentPhoto].classList.remove('active');
+      currentPhoto = (currentPhoto + 1) % polaroids.length;
+      polaroids[currentPhoto].classList.add('active');
+    }, 3000);
+  </script>
+
 </body>
 </html>
