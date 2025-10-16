@@ -8,7 +8,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
 </head>
 <body>
+ <!-- Layar Pembuka -->
+  <div id="intro-screen" class="intro-screen">
+    <h1>Apakah kamu siap?</h1>
+    <button id="start-btn">🎵 Mulai</button>
+  </div>
 
+  <!-- Konten Utama -->
+  <div id="main-content" style="display:none;">
   <!-- Musik Latar -->
   <audio id="bg-music" loop>
     <source src="lagu.mp3" type="audio/mpeg">
@@ -54,7 +61,24 @@
     <div class="base"></div>
     <div class="candle"><div class="flame"></div></div>
   </div>
+</div>
 
+  <script>
+    const startBtn = document.getElementById("start-btn");
+    const introScreen = document.getElementById("intro-screen");
+    const mainContent = document.getElementById("main-content");
+    const music = document.getElementById("bg-music");
+
+    startBtn.addEventListener("click", () => {
+      introScreen.style.opacity = "0";
+      setTimeout(() => {
+        introScreen.style.display = "none";
+        mainContent.style.display = "block";
+        mainContent.style.animation = "fadeIn 1s ease";
+        music.play();
+      }, 800);
+    });
+  </script>
   <!-- Script Navigasi + Slideshow -->
   <script>
     const pages = document.querySelectorAll('.page');
