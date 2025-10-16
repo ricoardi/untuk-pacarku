@@ -32,6 +32,29 @@ p.lead{color:var(--muted);margin:0 0 18px;font-size:15px}
 .mini-cake{position:absolute;left:18px;bottom:18px;width:80px;height:70px}
 .mini-cake .layer{width:70px;height:14px;border-radius:8px;background:linear-gradient(180deg,#ffdede,#ffb6c1);margin-bottom:6px}
 
+.mini-cake {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: pink;
+  border-radius: 10px;
+}
+
+.mini-cake::before,
+.mini-cake::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  right: 5px;
+  height: 8px;
+  background: #ffb6c1;
+  border-radius: 5px;
+}
+
+.mini-cake::before { top: 10px; }
+.mini-cake::after { top: 25px; }
 
 @media (max-width:600px){.wrap{padding:18px}}
 </style>
