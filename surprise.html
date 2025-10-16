@@ -39,6 +39,28 @@
   </div>
 
 <script>
+/* === Slideshow otomatis === */
+const polaroids = document.querySelectorAll('.polaroid');
+let current = 0;
+
+function showPhoto(index) {
+  polaroids.forEach((p, i) => {
+    p.classList.toggle('active', i === index);
+    // Rotasi acak kecil biar lucu
+    const rotation = (Math.random() * 12 - 6).toFixed(1); 
+    p.style.transform = `rotate(${rotation}deg) scale(${i === index ? 1 : 0.9})`;
+  });
+}
+
+function nextPhoto() {
+  current = (current + 1) % polaroids.length;
+  showPhoto(current);
+}
+
+showPhoto(current);
+setInterval(nextPhoto, 3500); // ganti foto tiap 3.5 detik
+
+/* === Navigasi halaman ucapan === */
 let currentPage = 1;
 const totalPages = 3;
 const showPage = (n) => {
