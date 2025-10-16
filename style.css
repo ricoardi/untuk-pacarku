@@ -1,0 +1,144 @@
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive;
+  background: linear-gradient(135deg, #ffe1f0, #fff0f6);
+  color: #444;
+  text-align: center;
+}
+
+/* ========== INDEX PAGE ========== */
+.index-page .container {
+  margin-top: 15%;
+  animation: fadeIn 1s ease;
+}
+
+.index-page button {
+  background: linear-gradient(45deg, #ff9de2, #ff7ac2);
+  border: none;
+  padding: 15px 25px;
+  border-radius: 20px;
+  color: white;
+  font-size: 1.1em;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.index-page button:hover {
+  transform: scale(1.05);
+}
+
+/* ========== MINI CAKE ========== */
+.mini-cake {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 50px;
+  height: 60px;
+  animation: wiggle 3s infinite ease-in-out;
+}
+.mini-cake .base {
+  width: 100%;
+  height: 35px;
+  background: #ffb6c1;
+  border-radius: 10px 10px 5px 5px;
+  position: absolute;
+  bottom: 0;
+}
+.mini-cake .layer {
+  width: 90%;
+  height: 15px;
+  background: #ffcce6;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 35px;
+  left: 5%;
+}
+.mini-cake .candle {
+  width: 6px;
+  height: 15px;
+  background: #fff;
+  position: absolute;
+  top: 5px;
+  left: calc(50% - 3px);
+  border-radius: 3px;
+}
+.mini-cake .flame {
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(circle, #ff0 0%, #ff8c00 70%);
+  border-radius: 50%;
+  position: absolute;
+  top: -8px;
+  left: -1px;
+  animation: flicker 0.2s infinite alternate;
+}
+
+@keyframes flicker {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(0.8); opacity: 0.7; }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(2deg); }
+}
+
+/* ========== SURPRISE PAGE ========== */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.polaroid {
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  transform: rotate(calc(-5deg + 10deg * random()));
+  width: 130px;
+  transition: transform 0.3s;
+}
+.polaroid img {
+  width: 100%;
+  border-radius: 5px;
+}
+.polaroid:hover {
+  transform: scale(1.05);
+}
+
+.message {
+  margin-top: 30px;
+}
+.page {
+  display: none;
+  animation: fadeIn 0.5s ease;
+}
+.page.active {
+  display: block;
+}
+.nav-buttons {
+  margin-top: 20px;
+}
+.nav-buttons button {
+  background: #ff8ad4;
+  border: none;
+  padding: 10px 15px;
+  margin: 0 10px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.nav-buttons button:hover {
+  background: #ff64c1;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
