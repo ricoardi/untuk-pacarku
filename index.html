@@ -1,87 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Rahasiakan... 😏</title>
-<style>
-:root{
---bg:#fff6fb; --accent:#ff7bb3; --accent2:#c28cff; --card:#fff; --muted:#6b6b6b;
-}
-*{box-sizing:border-box}
-html,body{height:100%}
-body{margin:0;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#fffafc,var(--bg));font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;color:#222}
-.wrap{width:min(980px,96%);padding:28px;border-radius:18px;background:linear-gradient(180deg,rgba(255,255,255,0.95),rgba(255,255,255,0.9));box-shadow:0 18px 40px rgba(210,148,190,0.12);position:relative;overflow:hidden}
-
-
-h1{font-size:clamp(22px,4vw,36px);margin:0 0 10px}
-p.lead{color:var(--muted);margin:0 0 18px;font-size:15px}
-
-
-.mystery{font-weight:700;padding:18px;border-radius:14px;background:linear-gradient(90deg,#fff,#fff8fb);box-shadow:inset 0 1px 0 rgba(255,255,255,0.7);}
-
-
-.btn-main{display:inline-block;margin-top:18px;padding:12px 18px;border-radius:999px;border:0;background:linear-gradient(90deg,var(--accent),var(--accent2));color:white;font-weight:800;font-size:16px;cursor:pointer;box-shadow:0 10px 22px rgba(194,140,255,0.16);text-decoration:none}
-
-
-/* mysterious decorations */
-.sparkle{position:absolute;right:-40px;top:-40px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle at 30% 30%,rgba(255,255,255,0.9),rgba(255,255,255,0));filter:blur(10px);transform:rotate(25deg)}
-
-
-/* small cake & balloon */
-.mini-cake{position:absolute;left:18px;bottom:18px;width:80px;height:70px}
-.mini-cake .layer{width:70px;height:14px;border-radius:8px;background:linear-gradient(180deg,#ffdede,#ffb6c1);margin-bottom:6px}
-
-.mini-cake {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
-  background: pink;
-  border-radius: 10px;
-}
-
-.mini-cake::before,
-.mini-cake::after {
-  content: '';
-  position: absolute;
-  left: 5px;
-  right: 5px;
-  height: 8px;
-  background: #ffb6c1;
-  border-radius: 5px;
-}
-
-.mini-cake::before { top: 10px; }
-.mini-cake::after { top: 25px; }
-
-@media (max-width:600px){.wrap{padding:18px}}
-</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>???</title>
+<link rel="stylesheet" href="style.css">
 </head>
-<body>
-<div class="wrap" role="main">
-<div class="sparkle" aria-hidden="true"></div>
+<body class="index-page">
+  <div class="container">
+    <h1>Hei... ada sesuatu untukmu 👀</h1>
+    <p>(Tidak ada yang akan tahu... kecuali kamu klik tombol ini 😏)</p>
+    <button onclick="window.location.href='surprise.html'">Klik kalau berani 🎁</button>
+  </div>
 
-
-<h1>Hmm... Ada yang tersembunyi di sini 👀</h1>
-<p class="lead">Ssst — rasanya harus berani sedikit untuk melihatnya. Jika kamu klik, kejutan akan terbuka... tapi ingat, rasa penasaran kadang lebih manis daripada jawabannya.</p>
-
-
-<div class="mystery">
-<p style="margin:0 0 6px">Apakah kau berani menerima sedikit kebahagiaan hari ini?</p>
-<small style="color:var(--muted)">(Tidak ada yang akan terbakar. Hanya hati yang mungkin meleleh.)</small>
-</div>
-
-
-<a class="btn-main" href="surprise.html" id="braveBtn">Klik kalau berani 😜</a>
-
-
-<div class="mini-cake" aria-hidden="true">
-<div class="layer"></div>
-<div class="layer"></div>
-<div style="width:46px;height:36px;border-radius:8px;background:linear-gradient(180deg,#fff1f6,#ffd1e6);margin-left:12px"></div>
-</div>
-</div>
+  <!-- Mini cake lucu -->
+  <div class="mini-cake">
+    <div class="base"></div>
+    <div class="layer"></div>
+    <div class="candle">
+      <div class="flame"></div>
+    </div>
+  </div>
 </body>
 </html>
