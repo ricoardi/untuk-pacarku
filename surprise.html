@@ -1,78 +1,59 @@
-<!doctype html>
-<div class="sticker">Kenangan</div>
-<img src="/mnt/data/WhatsApp Image 2025-10-16 at 17.17.25.jpeg" alt="pacar-3">
-<div class="caption">(Klik untuk zoom)</div>
-</div>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎉 Surprise!</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="surprise-page">
+  <audio id="bgm" src="happy-bday.mp3" autoplay loop></audio>
 
+  <div class="gallery">
+    <div class="polaroid"><img src="WhatsApp Image 2025-10-16 at 17.14.42.jpeg" alt="Foto 1"></div>
+    <div class="polaroid"><img src="WhatsApp Image 2025-10-16 at 17.15.55.jpeg" alt="Foto 2"></div>
+    <div class="polaroid"><img src="WhatsApp Image 2025-10-16 at 17.17.25.jpeg" alt="Foto 3"></div>
+    <div class="polaroid"><img src="WhatsApp Image 2025-10-16 at 17.18.39.jpeg" alt="Foto 4"></div>
+  </div>
 
-<div class="polaroid rot4">
-<div class="sticker">Aduh</div>
-<img src="/mnt/data/WhatsApp Image 2025-10-16 at 17.18.39.jpeg" alt="pacar-4">
-<div class="caption">(Klik untuk zoom)</div>
-</div>
-</div>
+  <div class="message">
+    <div class="page page1 active">
+      <h2>🎂 Halaman 1</h2>
+      <p>Deskripsi dummy: di sini nanti ucapan pembuka dari kamu (contoh: "Hari ini bukan hari biasa...")</p>
+    </div>
 
+    <div class="page page2">
+      <h2>💖 Halaman 2</h2>
+      <p>Deskripsi dummy: tempat kamu bisa taruh cerita lucu, kenangan, atau ungkapan manis.</p>
+    </div>
 
-</div>
+    <div class="page page3">
+      <h2>🎁 Halaman 3</h2>
+      <p>Deskripsi dummy: ucapan penutup, harapan, atau doa spesial buat dia 💫</p>
+    </div>
 
-
-<!-- Audio: ganti src ke file mp3 yang kamu punya. Nama file default: "happy-bday.mp3" -->
-<audio id="bgm" src="happy-bday.mp3" autoplay loop></audio>
-
+    <div class="nav-buttons">
+      <button id="prevBtn">⬅ Kembali</button>
+      <button id="nextBtn">Lanjut ➡</button>
+    </div>
+  </div>
 
 <script>
-// Slider logic
-const slides = Array.from(document.querySelectorAll('.slide'))
-let idx = 0
-const show = (i)=>{
-slides.forEach(s=>s.classList.remove('active'))
-slides[i].classList.add('active')
-}
-document.getElementById('nextBtn').addEventListener('click',()=>{ idx = (idx+1)%slides.length; show(idx) })
-document.getElementById('prevBtn').addEventListener('click',()=>{ idx = (idx-1+slides.length)%slides.length; show(idx) })
-
-
-// mute toggle
-const bgm = document.getElementById('bgm')
-const muteBtn = document.getElementById('muteBtn')
-muteBtn.addEventListener('click',()=>{
-bgm.muted = !bgm.muted
-muteBtn.textContent = bgm.muted ? '🔇' : '🔈'
-})
-
-
-// polaroid click -> open zoom overlay
-const gallery = document.getElementById('gallery')
-gallery.addEventListener('click',(e)=>{
-const img = e.target.closest('img')
-if(!img) return
-openZoom(img.src)
-})
-
-
-function openZoom(src){
-const overlay = document.createElement('div')
-overlay.style.position='fixed';overlay.style.inset=0;overlay.style.background='rgba(0,0,0,0.6)';overlay.style.display='flex';overlay.style.alignItems='center';overlay.style.justifyContent='center';overlay.style.zIndex=9999
-const big = document.createElement('img')
-big.src = src; big.style.maxWidth='94%'; big.style.maxHeight='86%'; big.style.borderRadius='12px'; big.style.boxShadow='0 20px 60px rgba(0,0,0,0.4)'
-overlay.appendChild(big)
-overlay.addEventListener('click',()=>overlay.remove())
-document.body.appendChild(overlay)
-}
-
-
-// randomize small rotations (adds organic look)
-document.querySelectorAll('.polaroid').forEach((p,i)=>{
-const r = ['rot1','rot2','rot3','rot4'][i%4]
-p.classList.add(r)
-})
-
-
-// accessibility: stop audio on pagehide
-window.addEventListener('pagehide',()=>bgm.pause())
-
-
-// hint: messages are contenteditable; user can click and type to replace text directly in browser.
+let currentPage = 1;
+const totalPages = 3;
+const showPage = (n) => {
+  document.querySelectorAll('.page').forEach((p, i) => {
+    p.classList.toggle('active', i === n - 1);
+  });
+};
+document.getElementById('nextBtn').onclick = () => {
+  if (currentPage < totalPages) currentPage++;
+  showPage(currentPage);
+};
+document.getElementById('prevBtn').onclick = () => {
+  if (currentPage > 1) currentPage--;
+  showPage(currentPage);
+};
 </script>
 </body>
 </html>
